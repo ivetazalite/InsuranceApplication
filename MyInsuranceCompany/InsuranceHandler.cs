@@ -17,21 +17,22 @@ namespace MyInsuranceCompany
         /// Client data
         /// 
         /// </summary>
-        public void GetPrice(Client client, int productId )
+        public decimal GetPrice(Client client, int productId)
         {
 
             ProductRepository  productRepository= new ProductRepository();
             var product = productRepository.GetProductById(productId);
             
-            //Calculate price
-
-            //Create a policy
-
+            
             //Izveidot Polices repozitoriju un izmantot metodi 
+            //Create a policy
+            PolicyRepository policyRepository = new PolicyRepository();
+            var policyNumber = policyRepository.CreateNewPolicy(product, client);
 
             //Return a policy
+            return policyRepository.GetPolicyPriceByNumber(policyNumber);
 
-
+            
         }
 
 

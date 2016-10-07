@@ -114,6 +114,7 @@
     <Compile Include="Claim.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="InsuranceHandler.cs" />
+    <Compile Include="PolicyRepository.cs" />
     <Compile Include="Policy.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductRepository.cs" />

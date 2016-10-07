@@ -18,19 +18,22 @@ namespace MyInsuranceCompany
                        {
                            ProductName = "MTPL",
                            CreatDateTime = new DateTime(2016, 9, 23),
-                           ProductId = 1
+                           ProductId = 1,
+                           Premium = 20
                        },
                        new Product()
                        {
                            ProductName = "Health",
                            CreatDateTime = new DateTime(2016, 9, 23),
-                           ProductId = 2
+                           ProductId = 2,
+                           Premium =100
                        },
                        new Product ()
                        {
                        ProductName = "Property",
                        CreatDateTime = new DateTime(2016, 9, 23),
-                       ProductId = 3
+                       ProductId = 3,
+                       Premium = 300
                       }
                    };
         }
@@ -39,19 +42,18 @@ namespace MyInsuranceCompany
         {
            
             //This one string possible to use instead of 
-            // return _products.FirstOrDefault(x => x.ProductId == id);
+             return _products.FirstOrDefault(x => x.ProductId == id);
 
-            foreach (var product in _products)
-            {
-                if (product.ProductId == id)
-                {
-                    return product;
-                }
-            }
-            return null;
+            //foreach (var product in _products)
+            //{
+            //    if (product.ProductId == id)
+            //    {
+            //        return product;
+            //    }
+            //}
+            //return null;
         }
-
-
+   
 
     }
 
