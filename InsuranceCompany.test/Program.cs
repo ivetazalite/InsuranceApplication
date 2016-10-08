@@ -18,8 +18,11 @@ namespace InsuranceCompany.test
             //izdomāt test piemēru , kā izsaukt getprice metodi 
             
             InsuranceHandler insuranceHandler = new InsuranceHandler();
-         //   insuranceHandler.GetPrice(client: , productId: );
+            ClientRepository clientRepository = new ClientRepository();
+            Client clientsClient = clientRepository.GetClientBySsn("121290-11233");
+            insuranceHandler.GetPrice(client: clientsClient, productId: 1 );
 
+          
 
             //salīdzināt iegūto rezultātu
 

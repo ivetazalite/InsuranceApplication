@@ -8,7 +8,7 @@ namespace MyInsuranceCompany
     public class ProductRepository
     {
         //This is were we are going to store all data 
-        private List<Product> _products = CreateProducts();
+        private readonly List<Product> _products = CreateProducts();
 
         private static List<Product> CreateProducts()
         {
@@ -41,8 +41,9 @@ namespace MyInsuranceCompany
         public Product GetProductById(int id)
         {
            
-            //This one string possible to use instead of 
+            //This one string possible to use instead of next peace of code 
              return _products.FirstOrDefault(x => x.ProductId == id);
+
 
             //foreach (var product in _products)
             //{

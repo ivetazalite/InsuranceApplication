@@ -113,6 +113,7 @@
   <ItemGroup>
     <Compile Include="Claim.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="ClientRepository.cs" />
     <Compile Include="InsuranceHandler.cs" />
     <Compile Include="PolicyRepository.cs" />
     <Compile Include="Policy.cs" />

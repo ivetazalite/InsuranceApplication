@@ -8,7 +8,7 @@ namespace MyInsuranceCompany
     public class PolicyRepository
     {
         //This is were we are going to store all data 
-        private List<Policy> _policy = CreatePolicy();
+        private readonly List<Policy> _policy = CreatePolicy();
 
         private static List<Policy> CreatePolicy()
         {
