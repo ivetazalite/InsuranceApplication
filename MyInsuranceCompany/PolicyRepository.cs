@@ -79,5 +79,33 @@ namespace MyInsuranceCompany
             }
         }
 
+        public Policy GetPolicyByNumber(string policyNumber)
+        {
+            Policy policy = _policy.FirstOrDefault(x => x.PolicyNumber == policyNumber);
+            if (policy != null)
+            {
+                return policy;
+            }
+            else
+            {
+                // throw new ApplicationException("Policy with "+ policyNumber +" not found");
+                throw new ApplicationException($"Policy with {policyNumber} not found");
+            }
+        }
+
+
+
+
+        public void SavePolicy(Policy newPolicy)
+        {
+            //atrast polisi pec number
+            var oldPolicy = GetPolicyByNumber(newPolicy.PolicyNumber);
+            //izdzest esoso polisi pec number
+            _policy.Remove(oldPolicy);
+            //pievienot jaunu polisi 
+            _policy.Add(newPolicy);
+        }
+
+
     }
 }
