@@ -13,9 +13,11 @@ namespace MyInsuranceCompany
         public decimal Premium { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public Client Client { get; set; }
+        public string State { get; set; }
+        public string Client { get; set; }
         public List<Product> Products { get; set; }
         public List<Claim> Claims { get; set; }
+
 
     }
 }

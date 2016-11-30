@@ -18,27 +18,27 @@ namespace MyInsuranceCompany
                        {
                            ProductName = "MTPL",
                            CreatDateTime = new DateTime(2016, 9, 23),
-                           ProductId = 1,
+                           ProductId = "1",
                            Premium = 20
                        },
                        new Product()
                        {
                            ProductName = "Health",
                            CreatDateTime = new DateTime(2016, 9, 23),
-                           ProductId = 2,
+                           ProductId = "2",
                            Premium =100
                        },
                        new Product ()
                        {
                        ProductName = "Property",
                        CreatDateTime = new DateTime(2016, 9, 23),
-                       ProductId = 3,
+                       ProductId = "3",
                        Premium = 300
                       }
                    };
         }
 
-        public Product GetProductById(int id)
+        public Product GetProductById(string id)
         {
            
             //This one string possible to use instead of next peace of code 
@@ -54,7 +54,13 @@ namespace MyInsuranceCompany
             //}
             //return null;
         }
-   
+
+        public Product GetProductByName(string name)
+        {
+
+         return _products.FirstOrDefault(x => x.ProductName == name);
+
+        }
 
     }
 

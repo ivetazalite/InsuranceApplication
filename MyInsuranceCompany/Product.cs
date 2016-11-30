@@ -10,7 +10,7 @@ namespace MyInsuranceCompany
         public string ProductName { get; set; }
 
         public DateTime CreatDateTime { get; set; }
-        public int ProductId { get; set; }
+        public string ProductId { get; set; }
         public decimal Premium { get; set; }
         public Policy Policy { get; set; }
     }
