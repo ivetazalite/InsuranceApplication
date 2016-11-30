@@ -21,26 +21,37 @@ namespace Project
             string id = Console.ReadLine();
             Product product = productRepository.GetProductById(id: id);
 
-            //insuranceHandler.GetPrice(client: clientsClient, productId: 1 );
+            
 
             decimal premiumResult = insuranceHandler.GetPrice(client: clientsClient, productId: product);
+            Console.WriteLine("Your selected Product Premium is  -> {0}", premiumResult);
+
+            string policyNumber = insuranceHandler.GetPolicy(client: clientsClient, productId: product);
+
+            Console.WriteLine("Your Policy number is  -> {0}", policyNumber);
+
+       
+
+           Console.WriteLine("{0}'s {1} Policy Premium will be {2} ", name, product.ProductName, premiumResult );
+
+           Policy policy = insuranceHandler.GetPolicyData(client: clientsClient, productId: product);
+
+           Console.WriteLine($"Policy start date = {policy.StartDate}, end date = {policy.EndDate}, state = {policy.State}, client = {policy.Client}");
 
 
-         
-            Policy policy = policyRepository.GetPolicyByClient(clientsClient);
 
-            Console.WriteLine("Policy is {0}" , policy);
 
-            Console.WriteLine("{0}'s {1} Policy Premium will be {2} ", name, product.ProductName, premiumResult );
+
             Console.WriteLine("If you want to buy this Policy , then write  -> Yes ");
-            string answer = Console.ReadLine();
+           string answer = Console.ReadLine();
 
 
             if (answer == "Yes")
             {
                 Console.WriteLine("Buy Insurance method should be used here");
                 Console.ReadKey();
-               insuranceHandler.BuyInsurance(client: clientsClient, productid: product) ; 
+
+            //   insuranceHandler.BuyInsurance(client: clientsClient, productId: product); 
              }
             else
             {

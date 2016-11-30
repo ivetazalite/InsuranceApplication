@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+
 namespace MyInsuranceCompany
 {
     public class PolicyRepository
@@ -14,35 +15,35 @@ namespace MyInsuranceCompany
         {
             return new List<Policy>()
                    {
-                      // new Policy()
-                      // {
-                      //     PolicyNumber = "1",
-                      //     StartDate =  new DateTime(2016, 9, 23),
-                      //     EndDate = new DateTime(2017, 9, 22),
-                      //     Premium = 20,
-                      //     Version = 1,
-                      //     Client = Client,
-                      //     State = "draft"
-                      //   //  Client = "My car 1"
-                      // },
-                      //new Policy()
-                      // {
-                      //     PolicyNumber = "2",
-                      //     StartDate =  new DateTime(2016, 10, 1),
-                      //     EndDate = new DateTime(2017, 9, 30),
-                      //     Premium = 20,
-                      //     Version = 1,
-                      //    // Client = "My car 2"
-                      // },
-                      //new Policy()
-                      // {
-                      //     PolicyNumber = "3",
-                      //     StartDate =  new DateTime(2016, 10, 6),
-                      //     EndDate = new DateTime(2017, 10, 5),
-                      //     Premium = 20,
-                      //     Version = 1,
-                      //    // Client = "My car 3"
-                      // }
+                       new Policy()
+                       {
+                           PolicyNumber = "1",
+                           StartDate =  new DateTime(2016, 9, 23),
+                           EndDate = new DateTime(2017, 9, 22),
+                           Premium = 20,
+                           Version = 1,
+                         //  Client = Client,
+                           State = "draft"
+                         //  Client = "My car 1"
+                       },
+                      new Policy()
+                       {
+                           PolicyNumber = "2",
+                           StartDate =  new DateTime(2016, 10, 1),
+                           EndDate = new DateTime(2017, 9, 30),
+                           Premium = 20,
+                           Version = 1,
+                          // Client = "My car 2"
+                       },
+                      new Policy()
+                       {
+                           PolicyNumber = "3",
+                           StartDate =  new DateTime(2016, 10, 6),
+                           EndDate = new DateTime(2017, 10, 5),
+                           Premium = 20,
+                           Version = 1,
+                          // Client = "My car 3"
+                       }
                    };
         }
 
