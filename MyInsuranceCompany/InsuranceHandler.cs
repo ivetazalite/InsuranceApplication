@@ -21,9 +21,14 @@ namespace MyInsuranceCompany
 
           //policyRepository.GetPolicyByNumber(policyNumber);
 
-            policyRepository.SavePolicy(new Policy());
+           // policyRepository.SavePolicy(new Policy());
 
-            return new Policy(); 
+            // return new Policy(); 
+           return policyRepository.GetPolicyByNumber(policyNumber);
+
+
+
+
 
         }
 

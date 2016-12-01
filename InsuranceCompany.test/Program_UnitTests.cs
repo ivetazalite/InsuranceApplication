@@ -110,8 +110,8 @@ namespace InsuranceCompany.test
             
             // atrod polisi, kas tika izveidota GetPrice metodes lika
 
-            string policyNumber = insuranceHandler.GetPolicy(client: clientsClient, productId: product);
-            Console.WriteLine(" Policy Number is {0} " , policyNumber);
+         //   string policyNumber = insuranceHandler.GetPolicy(client: clientsClient, productId: product);
+         //   Console.WriteLine(" Policy Number is {0} " , policyNumber);
 
           
 

@@ -49,10 +49,12 @@ namespace Project
             if (answer == "Yes")
             {
                 Console.WriteLine("Buy Insurance method should be used here");
-                Console.ReadKey();
+              
 
-            //   insuranceHandler.BuyInsurance(client: clientsClient, productId: product); 
-             }
+                Policy policy1 = insuranceHandler.BuyInsurance(client: clientsClient, productId: product);
+                Console.WriteLine($"Policy {policy1.PolicyNumber}, {policy1.State}");
+                Console.ReadKey();
+            }
             else
             {
                 Console.WriteLine("See you next time!");
