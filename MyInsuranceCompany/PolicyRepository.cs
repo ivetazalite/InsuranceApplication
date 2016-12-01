@@ -113,6 +113,23 @@ namespace MyInsuranceCompany
             }
         }
 
+        public Policy UpdatePolicyState(string policyNumber)
+        {
+            Policy policy = _policy.FirstOrDefault(x => x.PolicyNumber == policyNumber);
+            if (policy != null)
+            {
+                policy.State = "active";
+                return policy;
+            }
+            else
+            {
+                // throw new ApplicationException("Policy with "+ policyNumber +" not found");
+
+                throw new ApplicationException($"Policy with {policyNumber} not found");
+            }
+        }
+
+
 
         public void SavePolicy(Policy newPolicy)
         {

@@ -7,29 +7,27 @@ using System.Web.Hosting;
 namespace MyInsuranceCompany
 {
     public class InsuranceHandler
+
     {
         public Policy BuyInsurance(Client client, Product productId)
         {
+
+
             ProductRepository productRepository = new ProductRepository();
             var product = productRepository.GetProductById(productId.ProductId);
-
-
+            
             //Izveidot Polices repozitoriju un izmantot metodi 
             //Create a policy
             PolicyRepository policyRepository = new PolicyRepository();
             var policyNumber = policyRepository.CreateNewPolicy(product, client);
+            
 
-          //policyRepository.GetPolicyByNumber(policyNumber);
-
-           // policyRepository.SavePolicy(new Policy());
-
-            // return new Policy(); 
-           return policyRepository.GetPolicyByNumber(policyNumber);
-
-
-
-
-
+            // var obj = myList.FirstOrDefault(x => x.MyProperty == myValue);
+            // if (obj != null) obj.OtherProperty = newValue;
+            // http://stackoverflow.com/questions/7190016/how-to-update-an-object-in-a-list-in-c-sharp
+     
+            return policyRepository.UpdatePolicyState(policyNumber);
+            
         }
 
         /// <summary>

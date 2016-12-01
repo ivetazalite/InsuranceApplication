@@ -52,7 +52,7 @@ namespace Project
               
 
                 Policy policy1 = insuranceHandler.BuyInsurance(client: clientsClient, productId: product);
-                Console.WriteLine($"Policy {policy1.PolicyNumber}, {policy1.State}");
+                Console.WriteLine($"Policy client = {policy1.Client}, State = {policy1.State}, Start date = {policy1.StartDate}, End date = {policy1.EndDate}");
                 Console.ReadKey();
             }
             else
