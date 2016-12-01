@@ -25,9 +25,14 @@ namespace MyInsuranceCompany
             // var obj = myList.FirstOrDefault(x => x.MyProperty == myValue);
             // if (obj != null) obj.OtherProperty = newValue;
             // http://stackoverflow.com/questions/7190016/how-to-update-an-object-in-a-list-in-c-sharp
-     
-            return policyRepository.UpdatePolicyState(policyNumber);
-            
+
+
+            Policy policy = policyRepository.UpdatePolicyState(policyNumber);
+
+            policyRepository.SavePolicy(policy);
+
+            return policy; // policyRepository.UpdatePolicyState(policyNumber);
+
         }
 
         /// <summary>

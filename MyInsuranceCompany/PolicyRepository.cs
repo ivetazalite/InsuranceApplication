@@ -119,7 +119,10 @@ namespace MyInsuranceCompany
             if (policy != null)
             {
                 policy.State = "active";
-                return policy;
+
+                return
+                  
+                    policy;
             }
             else
             {
